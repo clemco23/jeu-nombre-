@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Deviner un nombre</h1>
+        <p>Devinez un nombre entre 1 et 100, vous avez 10 chances max.
+        Pour chaque tentative nous vous dirons si votre estimation est trop ou pas assez élevée !</p>
+        <input type="number" id="guessField" class="guessField">
+        <input type="submit" value="Valider" id="guessSubmit">
+        <button id="reset">Reset</button>
+        
+        <div id="resultParas">
+            <p id="guesses"></p>
+            <p id="lastResult"></p>
+            <p id="lowOrHigh"></p>
+        </div>
+    </div>
+    <script src="jeu.js"></script>
+</body>
+</html>
