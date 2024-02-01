@@ -1,9 +1,9 @@
-//1. générer un nombre aléatoire 
+
 let randomNumber = Math.floor(Math.random()*100);
 // console.log(randomNumber);
 let maxTry = 10;
 
-//2. selesctionner les elements HTML (en js) pour pouvoir les manipuler plus tard 
+
 let guessField = document.getElementById('guessField');
 let guessSubmit = document.getElementById('guessSubmit');
 let reset = document.getElementById('reset');
@@ -12,25 +12,10 @@ let lastResult = document.getElementById('lastResult');
 let lowOrHigh = document.getElementById('lowOrHigh');
 
 
-//3. on va récuperer le nombre tappé dans l'input et vérifier si il est bon oui pas
+
 guessSubmit.addEventListener("click", function() {
-    //1. Récuperer la valeur du champ guessFiled
     let guess = (guessField.value);
     maxTry--;
-    //2. On va tester si la variable est égale a randomNumber
-    // if (guess == randomNumber) {
-    //     console.log("gagné")
-    //     lowOrHigh.textContent = "gagné";
-    // }else {
-    //     if(guess < randomNumber) {
-    //         console.log("trop bas")
-    //         lowOrHigh.textContent = "trop bas";
-    //     }if (guess > randomNumber) {
-    //         console.log("trop haut")
-    //         lowOrHigh.textContent = "trop haut";
-    //     }
-    // }
-//autre solution :
     if (guess == randomNumber) {
         lowOrHigh.textContent = "bien joué";
         document.body.style.background = "green";
@@ -41,24 +26,6 @@ guessSubmit.addEventListener("click", function() {
         lowOrHigh.textContent = "trop bas";
         guesses.textContent = maxTry + " essais restant";
     }
-
-    
-
-    
-    
-    //3. si oui, on a gagner, si trop élever, on affiche ça a l'utilisateur, sinon, on affiche trop bas 
-    // réaliser la logique, donc, les if else, et si affichez des console.log a l'intérieur 
-    //4. Nous devons maintenant gérer les 10 tentatives max 
-    //5. créer une variable qui vaut 10 
-    //6. lorsque on fait une tentative, on diminue de 1
-    //7. lorsque notre variable vaut 0, on stoppe le jeu 
-    //8. leNomDeVotreInput.dasabled = true;
-
-    // maxTry--;
-    // if ( maxTry == 0 )
-    //     console.log("perdu"); 
-    // else 
-    //     console.log("il te reste " + maxTry + " essai");
 
     if(maxTry == 0) {
         lowOrHigh.textContent = "perdu !";
@@ -92,11 +59,10 @@ reset.addEventListener("click", function(){
     guesses.textContent = "";
 
 });
-// LE BOUTON RESET
-    //1. Rajouter un evenement sur le bouton reset
-    //2. On doit regénérer le nombre aléatoire
-    //3. Réinitialiser le nombre de tentatives
-    //4. reactiver les champs
+
+
+
+
 
 
 
